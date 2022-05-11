@@ -2,9 +2,9 @@
     display: flex;
     justify-content: space-around;
     justify-items: space-around;
-    width: 1600px;
+    width: 1000px;
     flex-direction: column;
-    align-items: center;
+
 }
 
 .grid {
@@ -14,15 +14,15 @@
     padding: 10px;
     grid-column-start: 1;
     grid-column-end: 16;
+    border-style: solid;
 }
 
-.etch {
-    size: auto;
+.item {
     width:100px;
     height:100px;
 }
 
-.etchHover {
+.itemHovered {
     size: auto;
     background-color:black;
     border-style: solid;

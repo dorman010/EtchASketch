@@ -15,9 +15,10 @@
     grid-column-start: 1;
     grid-column-end: 16;
     border-style: solid;
+    width:fit-content;
+    
 }
-
-.item {
+#item {
     width:100px;
     height:100px;
 }

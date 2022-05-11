@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    justify-items: space-around;
+    width: 1600px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid {
+    margin-left: 20%;    
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    padding: 10px;
+    grid-column-start: 1;
+    grid-column-end: 16;
+}
+
+.etch {
+    size: auto;
+    width:100px;
+    height:100px;
+}
+
+.etchHover {
+    size: auto;
+    background-color:black;
+    border-style: solid;
+    border-color: black;
+    width:100px;
+    height:100px;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

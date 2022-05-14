@@ -1,13 +1,11 @@
-const grid = document.querySelector('.grid');
-
-for (let i = 1; i <= (16*16); i++) {
+const grid = document.querySelector('#grid');
+const gridWidth = 16;
+const gridHeight = 16;
+function drawGrid() {
+for (let i = 0; i < (gridWidth*gridHeight); i++) {
     let gridItem = document.createElement('div');
     gridItem.setAttribute('id','item');
     grid.appendChild(gridItem);
   }
-
-document.getElementById('item').addEvenetListener('mouseover', hover);
-
-function hover(){
-    document.getElementById('item').style.backgroundcolor="black";
 }
+drawGrid();

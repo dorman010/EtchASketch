@@ -4,16 +4,17 @@ body {
 
 .container {
     display: flex;
-    justify-content: space-around;
-    justify-items: space-around;
+    justify-content: center;
+    justify-items: center;
     width: fit-content;
-    flex-direction: column;
+    flex-direction: column; 
     margin-left: 20%;
+    align-items: center;
+
 
 }
 
 #grid {
-    margin-left: 20%;    
     display: grid;
     padding: 10px;
     border-style: solid;
@@ -65,3 +66,7 @@ input {
     margin-top: 20px;
 }
 
+button {
+    border-radius: 5px;
+    
+}

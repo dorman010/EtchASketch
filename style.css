@@ -7,32 +7,32 @@
 
 }
 
-.grid {
+#grid {
     margin-left: 20%;    
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     padding: 10px;
-    grid-column-start: 1;
-    grid-column-end: 16;
     border-style: solid;
     width:fit-content;
+    padding: 0;
     
 }
+
 #item {
-    width:100px;
-    height:100px;
-    background-color:black;
+    width:25px;
+    height:25px;
+    background-color: white;
+    
 }
 
-.itemHovered {
-    size: auto;
-    background-color:black;
-    border-style: solid;
-    border-color: black;
-    width:100px;
-    height:100px;
+#itemHovered {
+    width: 25px;
+    height: 25px;
+    background-color: black;
+
 }
 
-h1 {
+.title {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 20%;
 }

@@ -1,38 +1,70 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .container {
     display: flex;
     justify-content: space-around;
     justify-items: space-around;
-    width: 1000px;
+    width: fit-content;
     flex-direction: column;
+    margin-left: 20%;
 
 }
 
 #grid {
     margin-left: 20%;    
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
     padding: 10px;
     border-style: solid;
-    width:fit-content;
+    width:500px;
+    height: 500px;
     padding: 0;
     
 }
 
 #item {
-    width:25px;
-    height:25px;
+
     background-color: white;
+    margin: 0;
+    padding: 0;
+    border: 0;
     
 }
 
-#itemHovered {
-    width: 25px;
-    height: 25px;
+#active {
     background-color: black;
-
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 .title {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-left: 20%;
 }
+
+input {
+    width: 50px;
+}
+
+#top {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+#bottom {
+    display: flex;
+    justify-content: center;
+}
+
+#widthButton #heightButton {
+    width: 100px;
+}
+
+#reset {
+
+    width: 50px;
+    margin-top: 20px;
+}
+

@@ -1,7 +1,6 @@
 const grid = document.querySelector('#grid');
 var gridWidth = 16;
 var gridHeight = 16;
-
 const newGridButton = document.querySelector('#newDimensions');
 // queries new grid dimensions, throws error and exits function if invalid.
 newGridButton.addEventListener('click', () => {
@@ -38,22 +37,39 @@ newGridButton.addEventListener('click', () => {
     alert(`That isn't a valid number, silly!`);
     return;
   }
-  // Resets the grid to all blanks:
-  gridItem.forEach(element => {
-    element.setAttribute('id', 'item');
+  // Resets the grid to all blanks with the 'item' class:
+  resetButton.addEventListener('click', () => {
+    gridItem.forEach(element => {
+      element.setAttribute('class', 'item');
+    })
   });
-  //draws a new grid:
-  grid.setAttribute('grid-template-columns', `repeat(auto, auto)`)
+  // deletes all existing 'item' divs:  
+  grid.innerHTML="";
+  // draws new grid, gives it all the mouseover effect:
   drawGrid();
-})
+  // gives it all the mouseover effect:
+  let newItems = document.querySelectorAll('.item');
+  function listenForHoverAgain() {
+    newItems.forEach(element => {
+      element.addEventListener('mouseover', () => {
+        element.setAttribute('class', 'active');
+      });
+    });
+    };
+    listenForHoverAgain(); 
+    var gridItem = document.querySelectorAll('.item');
+    var x = document.getElementById
+      });
 
 function drawGrid() {
   console.log(gridHeight);
   console.log(gridWidth);
 for (let i = 0; i < (gridWidth*gridHeight); i++) {
     let gridItem = document.createElement('div');
-    gridItem.setAttribute('id','item');
-    grid.style.gridTemplateColumns=`repeat(16, 1fr)`;
+    gridItem.setAttribute('class','item');
+    grid.style.gridTemplateColumns=`repeat(${gridWidth}, auto)`;
+    grid.style.columnCount = gridWidth;
+    grid.style.rowCount = gridHeight;
     let itemWidth = 500/gridWidth;
     let itemHeight = 500/gridHeight;
     gridItem.style.width=itemWidth;
@@ -61,21 +77,26 @@ for (let i = 0; i < (gridWidth*gridHeight); i++) {
     grid.appendChild(gridItem);
     
   }
+  
 }
 drawGrid();
 
-const gridItem = document.querySelectorAll('#item');
+var gridItem = document.querySelectorAll('.item');
 
+// change color on mouseover
+function listenForHover() {
 gridItem.forEach(element => {
   element.addEventListener('mouseover', () => {
-    element.setAttribute('id', 'active');
+    element.setAttribute('class', 'active');
   });
 });
-
+};
+listenForHover();
+//reset button
 const resetButton = document.querySelector('#reset');
 
 resetButton.addEventListener('click', () => {
   gridItem.forEach(element => {
-    element.setAttribute('id', 'item');
-  });
+    element.setAttribute('class', 'item');
+  })
 });

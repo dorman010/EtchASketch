@@ -19,12 +19,10 @@ body {
     border-style: solid;
     width:500px;
     height: 500px;
-    padding: 0;
-    
+    padding: 0;    
 }
 
-#item {
-
+.item {
     background-color: white;
     margin: 0;
     padding: 0;
@@ -32,11 +30,10 @@ body {
     
 }
 
-#active {
+.active {
     background-color: black;
     margin: 0;
     padding: 0;
-    border: 0;
 }
 
 .title {
